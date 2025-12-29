@@ -1,0 +1,72 @@
+# -------------------------
+# Python cache / build files
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+
+# -------------------------
+# Virtual environments
+# -------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# -------------------------
+# Editor / IDE junk
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# OS junk
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Environment & secrets
+# -------------------------
+.env
+*.env
+.env.*
+# If using config.py for secrets, ignore it:
+config.py
+
+# -------------------------
+# Logs & runtime output
+# -------------------------
+*.log
+logs/
+log/
+nohup.out
+
+# -------------------------
+# Scan output files
+# -------------------------
+Scans/
+scans/
+*.xml
+*.nmap
+
+# -------------------------
+# MySQL Workbench backups
+# -------------------------
+*.mwb.bak
+
+# -------------------------
+# Project-specific temp files
+# -------------------------
+tmp/
+temp/
