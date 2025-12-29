@@ -118,12 +118,15 @@ DB_PORT=3306
 DB_USER=USERNAME
 DB_PASSWORD=CHANGE_ME
 DB_NAME=home_network_monitor
+```
 
 # Network scanning
+
 SUBNET=192.168.0.0/24
 SCAN_OUTPUT_DIR=/home/youruser/Desktop/Scans
 
 # Logging
+
 LOG_LEVEL=INFO
 
 .env is git-ignored - never commit real credentials.
@@ -132,17 +135,17 @@ LOG_LEVEL=INFO
 
 ## 📦 Install Python Dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 (or manually)
 
-pip install mysql-connector-python python-dotenv
+`pip install mysql-connector-python python-dotenv`
 
 ---
 
 ## 🌐 Find Your Subnet (Linux)
 
-ip addr | grep inet
+`ip addr | grep inet`
 
 Example output:
 
@@ -156,7 +159,7 @@ So your subnet is:
 
 ## 📁 Create Scan Output Directory
 
-mkdir ~/Desktop/Scans
+`mkdir ~/Desktop/Scans`
 
 ---
 
@@ -164,9 +167,10 @@ mkdir ~/Desktop/Scans
 
 This project uses **host discovery only**:
 
-nmap -sn <subnet>
+`nmap -sn <subnet>`
 
 This means:
+
 - ✔ Detects whether hosts exist
 - ❌ Does not port scan
 - ❌ Does not fingerprint services
@@ -180,6 +184,7 @@ This keeps the tool **non-intrusive and ethical**.
 python scanner.py
 
 The scanner will:
+
 1. Run nmap -sn
 2. Parse discovered hosts
 3. Insert or update device records
@@ -192,13 +197,14 @@ The scanner will:
 
 Example - run every 10 minutes
 
-*/10 * * * * /usr/bin/python3 /path/to/scanner.py >> /var/log/netmon.log 2>&1
+`*/10 * * * * /usr/bin/python3 /path/to/scanner.py >> /var/log/netmon.log 2>&1`
 
 ---
 
 ## 📊 Dashboard (Next.js - In Progress)
 
 Planned UI features include:
+
 - Device list with status indicator
 - Friendly names & hostnames
 - Vendor & device type info
@@ -215,6 +221,7 @@ This README will be updated as the UI ships 🚀
 ## 🧪 Why I Built This
 
 I wanted a project that:
+
 - Blends **Python + Networking + SQL**
 - Uses **real-world data (my network)**
 - Follows **ethical boundaries**
@@ -224,7 +231,7 @@ I wanted a project that:
 
 This repo is part of my journey toward becoming a stronger:
 
-**Software Engineer · DevOps Engineer · Security-minded Builder
+\*\*Software Engineer · DevOps Engineer · Security-minded Builder
 
 And honestly - I'm having fun doing it 😄
 
@@ -233,6 +240,7 @@ And honestly - I'm having fun doing it 😄
 ## 🛡 Security Considerations
 
 This project uses:
+
 - **Least-privilege DB users (not root)**
 - Host-restricted DB accounts (user@ip)
 - Network-restricted DB ports
@@ -240,6 +248,7 @@ This project uses:
 - Non-intrusive host discovery mode
 
 Future enhancements may include:
+
 - TLS DB connections
 - Optional dashboard authentication
 - Encrypted backups
@@ -274,4 +283,3 @@ MIT - use, learn, and improve responsibly.
 ## ❤️ Acknowledgements
 
 Built after too many cups of coffee, lots of debugging, and a stubborn desire to understand my own network from the inside out 😅
-```
