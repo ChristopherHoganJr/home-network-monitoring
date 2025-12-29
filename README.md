@@ -231,7 +231,7 @@ I wanted a project that:
 
 This repo is part of my journey toward becoming a stronger:
 
-\*\*Software Engineer · DevOps Engineer · Security-minded Builder
+**Software Engineer · DevOps Engineer · Security-minded Builder**
 
 And honestly - I'm having fun doing it 😄
 
